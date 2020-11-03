@@ -15,7 +15,8 @@ args = parser.parse_args()
 
 def main():
     if args.board_grid // args.unit_grid == 0:
-        data = {'f': np.random.randint(0, 2, (args.board_grid, args.board_grid))}
+        matrix = np.random.randint(0, 2, (args.board_grid, args.board_grid))
+        data = {'f': matrix}
         # data = {'f': np.random.randint(0, 2, (100, 100))}
         path = args.outdir + '/' + args.file_name
         # path = 'example'
