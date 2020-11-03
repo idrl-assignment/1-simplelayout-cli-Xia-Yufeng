@@ -22,6 +22,7 @@ def main():
     # scio.savemat(path + '.mat')
     # plt.imshow(data['f'])
     # plt.savefig(path + '.jpg')
+    return()
 
 
 if __name__ == "__main__":
