@@ -1,7 +1,7 @@
 import argparse
-import numpy as np
-import scipy.io as scio
-import matplotlib.pyplot as plt
+# import numpy as np
+# import scipy.io as scio
+# import matplotlib.pyplot as plt
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--board_grid', type=int, help='board_grid')
@@ -16,12 +16,12 @@ args = parser.parse_args()
 def main():
     # matrix = np.random.randint(0, 2, (args.board_grid, args.board_grid))
     # data = {'f': matrix}
-    data = {'f': np.random.randint(0, 2, (100, 100))}
-    path = args.outdir + '/' + args.file_name
-    path = 'example'
-    scio.savemat(path + '.mat', data)
-    plt.imshow(data['f'])
-    plt.savefig(path + '.jpg')
+    # data = {'f': np.random.randint(0, 2, (100, 100))}
+    # path = args.outdir + '/' + args.file_name
+    # path = 'example'
+    # scio.savemat(path + '.mat')
+    # plt.imshow(data['f'])
+    # plt.savefig(path + '.jpg')
 
 
 if __name__ == "__main__":
