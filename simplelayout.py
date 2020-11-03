@@ -7,10 +7,11 @@ parser = argparse.ArgumentParser()
 parser.add_argument('--board_grid', type=int, help='board_grid')
 parser.add_argument('--unit_grid', type=int, help='unit_grid')
 parser.add_argument('--unit_n', type=int, help='unit_n')
-parser.add_argument('--positions', type=int, help='learning rate decay')
+parser.add_argument('--positions', type=int, help='positions')
 parser.add_argument('--outdir', type=str, help='outdir')
-parser.add_argument('--file_name', type=str, help='training epochs')
+parser.add_argument('--file_name', type=str, help='file_name')
 args = parser.parse_args()
+
 
 def main():
     data = {'f': np.random.randint(0, 2, (args.board_grid, args.board_grid))}
