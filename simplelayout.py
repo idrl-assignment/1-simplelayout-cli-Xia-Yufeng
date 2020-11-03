@@ -19,7 +19,7 @@ def main():
     # data = {'f': np.random.randint(0, 2, (100, 100))}
     path = args.outdir + '/' + args.file_name
     # path = 'example'
-    scio.savemat(path + '.mat')
+    scio.savemat(path + '.mat', data)
     plt.imshow(data['f'])
     plt.savefig(path + '.jpg')
     return()
