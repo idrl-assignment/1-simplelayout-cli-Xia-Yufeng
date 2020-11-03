@@ -14,13 +14,14 @@ args = parser.parse_args()
 
 
 def main():
-    data = {'f': np.random.randint(0, 2, (args.board_grid, args.board_grid))}
-    # data = {'f': np.random.randint(0, 2, (100, 100))}
-    path = args.outdir + '/' + args.file_name
-    # path = 'example'
-    scio.savemat(path + '.mat', data)
-    plt.imshow(data['f'])
-    plt.savefig(path + '.jpg')
+    if args.board_grid // args.unit_grid == 0:
+        data = {'f': np.random.randint(0, 2, (args.board_grid, args.board_grid))}
+        # data = {'f': np.random.randint(0, 2, (100, 100))}
+        path = args.outdir + '/' + args.file_name
+        # path = 'example'
+        scio.savemat(path + '.mat', data)
+        plt.imshow(data['f'])
+        plt.savefig(path + '.jpg')
 
 
 if __name__ == "__main__":
