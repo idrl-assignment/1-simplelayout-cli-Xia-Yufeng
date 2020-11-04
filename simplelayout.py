@@ -16,9 +16,7 @@ args = parser.parse_args()
 def main():
     matrix = np.random.randint(0, 2, (args.board_grid, args.board_grid))
     data = {'f': matrix}
-    # data = {'f': np.random.randint(0, 2, (100, 100))}
     path = args.outdir + '/' + args.file_name
-    # path = 'example'
     scio.savemat(path + '.mat', data)
     plt.imshow(data['f'])
     plt.savefig(path + '.jpg')
