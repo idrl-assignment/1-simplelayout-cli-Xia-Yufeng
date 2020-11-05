@@ -21,13 +21,12 @@ def main():
         sys.exit('User exit')
     if max(args.positions) > (args.board_grid / args.unit_grid)**2:
         sys.exit('User exit')
-    
     if not os.path.exists(args.outdir):
         os.makedirs(args.outdir)
     filename = args.outdir + '/' + args.file_name
-    with open(filename + '.mat', 'w') as file_object:
+    with open(filename + '.mat', 'w') as _:
         pass
-    with open(filename + '.jpg', 'w') as file_object:
+    with open(filename + '.jpg', 'w') as _:
         pass
 
 
