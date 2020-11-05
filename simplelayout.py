@@ -1,8 +1,6 @@
 import sys
 import argparse
-import numpy as np
-import scipy.io as scio
-import matplotlib.pyplot as plt
+from pathlib import Path
 
 
 def main():
@@ -23,12 +21,10 @@ def main():
         sys.exit('User exit')
     if max(args.positions) > (args.board_grid / args.unit_grid)**2:
         sys.exit('User exit')
-    matrix = np.random.randint(0, 2, (args.board_grid, args.board_grid))
-    data = {'f': matrix}
-    path = args.outdir + '/' + args.file_name
-    scio.savemat(path + '.mat', data)
-    plt.imshow(data['f'])
-    plt.savefig(path + '.jpg')
+    file1 = Path(args.file_name + '.mat')
+    file1.touch(exist_ok=True)
+    file2 = Path(args.file_name + '.jpg')
+    file2.touch(exist_ok=True)
 
 
 if __name__ == "__main__":
