@@ -1,11 +1,15 @@
-import sys
-import argparse
-import numpy as np
-import scipy.io as scio
-import matplotlib.pyplot as plt
-
-
+# import sys
+# import argparse
+# import numpy as np
+# import scipy.io as scio
+# import matplotlib.pyplot as plt
 def main():
+    import sys
+    import argparse
+    import numpy as np
+    import scipy.io as scio
+    import matplotlib.pyplot as plt
+
     parser = argparse.ArgumentParser()
     parser.add_argument('--board_grid', type=int, help='board_grid')
     parser.add_argument('--unit_grid', type=int, help='unit_grid')
